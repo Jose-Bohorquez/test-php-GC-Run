@@ -73,7 +73,7 @@
 		{
 			try {
 				// SQL para insertar un nuevo registro en la tabla ROLES
-				$sql = 'INSERT INTO ROLES VALUES (:rolCode, :rolName)';
+				$sql = 'INSERT INTO roles VALUES (:rolCode, :rolName)';
 				
 				// Prepara la consulta SQL
 				$stmt = $this->dbh->prepare($sql);

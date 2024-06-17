@@ -164,7 +164,7 @@
 		{
 			try {
 				// SQL para insertar un nuevo registro en la tabla ROLES
-				$sql = 'INSERT INTO USERS VALUES (
+				$sql = 'INSERT INTO users VALUES (
 					:rolCode, :rolName, :userCode, :userName,
 					:userLastName, :userEmail, :userPass, :userStatus
 				)';
