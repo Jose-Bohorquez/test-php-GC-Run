@@ -58,14 +58,7 @@
             $this -> userStatus = $userStatus;
 		}
 
-        #constructor para 2 parametros (pilas que aumenta el nombre del contructor dependiendo los args)
-		public function __construct2($userEmail, $userPass)
-		{
-            $this -> userEmail = $userEmail;
-            $this -> userPass = $userPass;
-		}
-
-
+		
 
 		// Metodos set() y get()
 

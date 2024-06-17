@@ -120,7 +120,7 @@
 					<div class="tile-tittle">Clientes</div>
 					<div class="tile-icon">
 						<i class="fas fa-users fa-fw"></i>
-						<p>5 Registrados</p>
+						<p>599 Registrados</p>
 					</div>
 				</a>
 
@@ -128,7 +128,7 @@
 					<div class="tile-tittle">Items</div>
 					<div class="tile-icon">
 						<i class="fas fa-pallet fa-fw"></i>
-						<p>9 Registrados</p>
+						<p>990 Registrados</p>
 					</div>
 				</a>
 
@@ -136,7 +136,7 @@
 					<div class="tile-tittle">Prestamos</div>
 					<div class="tile-icon">
 						<i class="fas fa-file-invoice-dollar fa-fw"></i>
-						<p>10 Registrados</p>
+						<p>1090 Registrados</p>
 					</div>
 				</a>
 
@@ -144,7 +144,7 @@
 					<div class="tile-tittle">Usuarios</div>
 					<div class="tile-icon">
 						<i class="fas fa-user-secret fa-fw"></i>
-						<p>50 Registrados</p>
+						<p>5603 Registrados</p>
 					</div>
 				</a>
 
@@ -152,7 +152,7 @@
 					<div class="tile-tittle">Empresa</div>
 					<div class="tile-icon">
 						<i class="fas fa-store-alt fa-fw"></i>
-						<p>1 Registrada</p>
+						<p>10999 Registrada</p>
 					</div>
 				</a>
 				
