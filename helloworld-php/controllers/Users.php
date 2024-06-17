@@ -14,8 +14,8 @@ class Users
     public function createUser()
 	{
         $user = new User(
-            "1",
-            "Admin",
+            "6",
+            "Desarrollador",
             "2355",
             "jose",
             "bohorquez",
@@ -23,10 +23,18 @@ class Users
             "abc123",
             1,
         );
-        print_r($user);
-        echo "<br><br>";
-        var_dump($user);
-        $user -> userCreate();
+        print_r($user); echo "<br><br>"; var_dump($user); $user -> userCreate();
+        $user_2 = new User(
+            "8",
+            "Admin",
+            "5673",
+            "julio",
+            "delgado",
+            "jd@gmail.com",
+            "321cba",
+            0,
+        );
+        print_r($user_2); echo "<br><br>"; var_dump($user_2); $user_2 -> userCreate();
 	}
 
     public function readUser()
