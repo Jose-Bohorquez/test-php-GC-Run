@@ -14,30 +14,23 @@ class Roles
 	public function createRol()
 	{
 		#objeto 1
-		$rol_1 = new Rol;
-		$rol_1 -> setRolCode("1");
-		$rol_1 -> setRolName("admin");
-
-		#objeto 2 (se puede crear asi tambien pero claramente debe haberse creado el constructor)
-		$rol_2 = new Rol("2", "customer");
-
-		$rol_3 = new Rol("3", "seller");
-
-		$rol_4 = new Rol("4", "provider");
-
-		$roles = [$rol_1, $rol_2, $rol_3, $rol_4];
-
-		for ($i=0; $i < 4; $i++) { 
-			echo "<br> Codigo Rol: " . $roles[$i] -> getRolCode();
-			echo "<br> Nombre Rol: " . $roles[$i] -> getRolName() . "<br><br>";
-		}
-
+		$rol = new Rol(
+			null,
+			"Desarrollador"
+		);
+		var_dump($rol);
 		echo "<br><br>";
+		print_r($rol);
+		echo "<br><br>";
+		$rol -> rolCreate();
+	}
 
-		foreach ($roles as $rol) {
-			echo "<br> Codigo Rol: " . $rol -> getRolCode();
-			echo "<br> Nombre Rol: " . $rol -> getRolName() . "<br><br>";
-		}
+	public function readRol()
+	{
+		#echo "estoy en el controladore roles y en la accion consultar roles";
+		$roles = new Rol;
+		$roles = $roles -> rolRead();
+		var_dump($roles);
 	}
 
 	

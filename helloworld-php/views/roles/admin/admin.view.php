@@ -8,7 +8,12 @@
 					<i class="far fa-times-circle show-nav-lateral"></i>
 					<img src="assets/templates/2_dashboard/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
 					<figcaption class="roboto-medium text-center">
-						Carlos Alfaro <br><small class="roboto-condensed-light">Web Developer</small>
+						Jose Bohorquez 
+						<br><small class="roboto-condensed-light">
+						Desarrollador Full Stack middle <br>
+						Analista de CyberSeguridad <br>
+						Tecnico Profesional en Sistemas
+						</small>
 					</figcaption>
 				</figure>
 				<div class="full-box nav-lateral-bar"></div>

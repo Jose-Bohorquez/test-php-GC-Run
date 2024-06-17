@@ -9,6 +9,7 @@
 
 		// Atributos: Encapsulamiento ( - private, # protected)
 
+		private $dbh; #para manejar la conexion (data base handler)
 		private $rolCode;
         private $rolName;
 		private $userCode;
@@ -25,12 +26,16 @@
 		#constructores (sobre carga de constructores) (pueden ser varios)
 		public function __construct()
 		{
-			$a = func_get_args();
-			$i = func_num_args();
-			if (method_exists($this, $f = '__construct' . $i)) 
-			{
-				call_user_func_array(array($this, $f), $a);
-			}
+			try {
+                $this->dbh = DataBase::connection(); #se usa el atributo dbh para pasar la conexion
+                $a = func_get_args();
+                $i = func_num_args();
+                if (method_exists($this, $f = '__construct' . $i)) {
+                    call_user_func_array(array($this, $f), $a);
+                }
+            } catch (Exception $e) {
+                die($e->getMessage());
+            } 
 		}
 
 		#constructor para 8 parametros (pilas que aumenta el nombre del contructor dependiendo los args)
@@ -155,6 +160,40 @@
 		// +++++ 2da parte persistencia DB (CRUD) +++++ //
 
 		#registrar
+		public function userCreate()
+		{
+			try {
+				// SQL para insertar un nuevo registro en la tabla ROLES
+				$sql = 'INSERT INTO USERS VALUES (
+					:rolCode, :rolName, :userCode, :userName,
+					:userLastName, :userEmail, :userPass, :userStatus
+				)';
+				
+				// Prepara la consulta SQL
+				$stmt = $this->dbh->prepare($sql);
+				
+				// Asocia valores a los parámetros de la consulta
+				$stmt->bindValue('rolCode', $this->getRolCode());
+				$stmt->bindValue('rolName', $this->getRolName());
+				$stmt->bindValue('userCode', $this->getUserCode());
+				$stmt->bindValue('userName', $this->getUserName());
+				$stmt->bindValue('userLastName', $this->getUserLastName());
+				$stmt->bindValue('userEmail', $this->getUserEmail());
+				$stmt->bindValue('userPass', $this->getUserPass());
+				$stmt->bindValue('userStatus', $this->getUserStatus());
+				
+				// Ejecuta la consulta
+				$stmt->execute();
+
+			} catch (Exception $e) {
+
+				// Captura cualquier excepción y termina el script mostrando el mensaje de error
+				die($e->getMessage());
+				
+			}
+		}
+
+
 		#consultar
 		#consultar obtener por id
 		#actualizar

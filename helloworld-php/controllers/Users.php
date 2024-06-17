@@ -16,6 +16,7 @@ class Users
         $user = new User(
             "1",
             "Admin",
+            "2355",
             "jose",
             "bohorquez",
             "bd@gmail.com",
@@ -23,14 +24,9 @@ class Users
             1,
         );
         print_r($user);
-
         echo "<br><br>";
-
-        $user_2 = new User(
-            "bd@gmail.com",
-            "abc123"
-        );
-        print_r($user_2);
+        var_dump($user);
+        $user -> userCreate();
 	}
 
     public function readUser()
