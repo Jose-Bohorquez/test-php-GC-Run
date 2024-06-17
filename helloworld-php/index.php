@@ -1,7 +1,7 @@
 <?php 
 
-require_once "controllers/Dashboard.php";
-$controller = new Dashboard;
-$controller -> main();
+require_once "controllers/Users.php";
+$controller = new Users;
+$controller -> createUser();
 
 ?>
