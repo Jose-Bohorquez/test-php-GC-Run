@@ -4,12 +4,12 @@ class DataBase {
         $username = getenv('DB_USER'); // e.g. 'your_db_user'
         $password = getenv('DB_PASS'); // e.g. 'your_db_password'
         $database = getenv('DB_NAME'); // e.g. 'your_db_name'
-        $instanceUnixSocket = getenv('INSTANCE_UNIX_SOCKET'); // e.g. '/cloudsql/project:region:instance'
+        $instanceUnixSocket = getenv('INSTANCE_UNIX_SOCKET'); // e.g. 'php-puro:us-central1:test-instancia-bd'
 
         try {
             // DSN para conectar usando un socket Unix
             $dsn = sprintf(
-                'mysql:dbname=%s;unix_socket=%s',
+                'mysql:dbname=%s;unix_socket=/cloudsql/%s',
                 $database,
                 $instanceUnixSocket
             );
