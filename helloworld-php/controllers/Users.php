@@ -25,7 +25,7 @@ class Users
         );
         print_r($user); echo "<br><br>"; var_dump($user); $user -> userCreate();
         $user_2 = new User(
-            8,
+            7,
             "Admin",
             5673,
             "julio",
