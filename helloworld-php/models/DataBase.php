@@ -22,7 +22,7 @@
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 
                 // Si la conexión se establece correctamente, retornamos el objeto PDO
-                echo "Conexión exitosa a la base de datos.";
+                //echo "Conexión exitosa a la base de datos.";
                 return $pdo;
             } catch (PDOException $e) {
                 // Si ocurre un error al conectar, capturamos la excepción y la imprimimos

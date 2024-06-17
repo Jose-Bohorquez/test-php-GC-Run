@@ -16,7 +16,7 @@ class Roles
 		#objeto 1
 		$rol = new Rol(
 			null,
-			"Desarrollador"
+			"Admin"
 		);
 		var_dump($rol);
 		echo "<br><br>";
